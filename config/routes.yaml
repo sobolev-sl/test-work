@@ -1,3 +1,23 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+create_order:
+  path: /api/order
+  controller: App\Controller\OrderController::create
+  methods: POST
+
+update_order:
+  path: /api/order/{order}
+  controller: App\Controller\OrderController::update
+  methods: PUT
+
+purchase_order:
+  path: /api/order/{order}/purchase
+  controller: App\Controller\OrderController::purchase
+  methods: POST
+
+get_order:
+  path: /api/order/{order}
+  controller: App\Controller\OrderController::getOrder
+  methods: GET
